@@ -1,0 +1,60 @@
+#+title: README
+
+* BackupScript 💾
+A simple, yet effective, Python script to manage your backups.
+
+** Features 🌟
+   - Incremental backups: If a backup from the current interval exists, BackupScript will only backup the changes since the last backup.
+   - Full backups: If no backup from the current interval exists, or if the full backup option is selected, BackupScript will create a new backup of all data.
+   - Interval selection: Choose the backup interval in either days or months.
+
+
+** Installation 🔧
+1. Clone the repository:
+   #+BEGIN_SRC sh
+   git clone https://github.com/smilesT/BackupScript.git
+   #+END_SRC
+2. Change to the project directory:
+   #+BEGIN_SRC sh
+   cd BackupScript
+   #+BEGIN_SRC
+3. Run the install script:
+   #+BEGIN_SRC sh
+   ./install.sh
+   #+END_SRC
+
+* How to use 🛠️
+** Performing a full backup
+   You can create a full backup of your data by using the -f option. This will create a new backup of all data in the source directory.
+
+   Here is an example usage:
+   #+BEGIN_SRC sh
+   BackupScript -f --src /path/to/source --dst /path/to/backup
+   #+END_SRC
+
+** Performing an incremental backup
+   By default, or when using the -i option, BackupScript creates an incremental backup. If a backup from the current interval exists, BackupScript will only backup the changes since the last backup.
+
+   Here is an example usage:
+   #+BEGIN_SRC sh
+   BackupScript -i --src /path/to/source --dst /path/to/backup
+   #+END_SRC
+
+** Specifying a backup interval
+   You can specify the backup interval in either days or months using the -d or -m options respectively. If you do not specify an interval, BackupScript defaults to 30 days.
+
+   Here is an example of specifying an interval in days:
+   #+BEGIN_SRC sh
+   BackupScript -d 10 --src /path/to/source --dst /path/to/backup
+   #+END_SRC
+
+   And here is an example of specifying an interval in months:
+   #+BEGIN_SRC sh
+   BackupScript -m 3 --src /path/to/source --dst /path/to/backup
+   #+END_SRC
+
+** Help 🆘
+For more information on the command-line arguments, run:
+#+BEGIN_SRC sh
+BackupScript -h
+#+END_SRC
