@@ -10,18 +10,18 @@ A simple, yet effective, Python script to manage your backups.
 
 
 ** Installation 🔧
-1. Clone the repository:
-   #+BEGIN_SRC sh
-   git clone https://github.com/smilesT/BackupScript.git
-   #+END_SRC
-2. Change to the project directory:
-   #+BEGIN_SRC sh
-   cd BackupScript
-   #+BEGIN_SRC
-3. Run the install script:
-   #+BEGIN_SRC sh
-   ./install.sh
-   #+END_SRC
+*** Clone the repository:
+#+BEGIN_SRC sh
+git clone https://github.com/smilesT/BackupScript.git
+#+END_SRC
+*** Change to the project directory:
+#+BEGIN_SRC sh
+cd BackupScript
+#+BEGIN_SRC
+*** Run the install script:
+#+BEGIN_SRC sh
+./install.sh
+#+END_SRC
 
 * How to use 🛠️
 ** Performing a full backup

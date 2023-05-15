@@ -30,7 +30,7 @@ class TestBackupManager(unittest.TestCase):
         with open(self.src_file_path, "w") as f:
             f.write("This is a test file")
 
-        self.bm = BackupManager({self.src_dir: self.dst_dir}, timedelta)
+        self.bm = BackupManager({self.src_dir: self.dst_dir}, self.interval)
 
     def tearDown(self):
         shutil.rmtree(self.src_dir)
